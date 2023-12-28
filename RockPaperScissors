@@ -1,0 +1,15 @@
+import random
+startGame = input("Would you like to play Rock, Paper, Scissors? (Y/N): \n")
+computersChoices = random.choice(["Rock", "Paper", "Scissors"])
+if startGame == "Y" :
+  playersChoices = input("Choose Rock, Paper, or Scissors: \n")
+  if playersChoices == computersChoices:
+    print("It's a tie!" + " You both chose " + playersChoices)
+  elif (playersChoices == "Rock" and computersChoices == "Paper") or (playersChoices == "Paper" and computersChoices == "Scissors"):
+        print("You lose!" + " The computer chose " + computersChoices)
+  elif (playersChoices == "Scissors" and computersChoices == "Rock"):
+        print("You lose!" + " The computer chose " + computersChoices)
+  else:
+        print("You win!"+ " The computer chose " + computersChoices)
+else: 
+  print("Okay, maybe next time!")
